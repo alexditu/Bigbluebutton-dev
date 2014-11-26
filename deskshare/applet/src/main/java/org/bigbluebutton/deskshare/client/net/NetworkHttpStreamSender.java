@@ -102,7 +102,8 @@ public class NetworkHttpStreamSender implements Runnable {
 		 */				
 		long start = System.currentTimeMillis();
 		try {			
-			url = new URL("http://" + host + SCREEN_CAPTURE__URL);
+			//url = new URL("http://" + host + SCREEN_CAPTURE__URL);
+			url = new URL(host + SCREEN_CAPTURE__URL);
 			conn = url.openConnection();
 		} catch (MalformedURLException e) {
 			e.printStackTrace();

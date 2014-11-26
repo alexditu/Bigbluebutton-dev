@@ -174,7 +174,8 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				var captureY:Number = 0;				
 				sharingFullScreen = fullScreen;
 				LogUtil.debug("Calling startApplet");
-				ExternalInterface.call("startApplet", uri, room, fullScreen, true /*useSVC2Check.selected*/);
+				var httpsUri:String = "https://" + uri;
+				ExternalInterface.call("startApplet", httpsUri, room, fullScreen, true /*useSVC2Check.selected*/);
 			}
 			
 			public function stopSharing():void{

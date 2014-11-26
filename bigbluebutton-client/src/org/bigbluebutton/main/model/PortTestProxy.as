@@ -38,7 +38,8 @@ package org.bigbluebutton.main.model {
 		}
 		
 		public function connect(protocol:String = "", hostname:String = "", port:String = "", application:String = "", testTimeout:Number = 10000):void {
-			var portTest:PortTest = new PortTest(protocol,hostname,port,application, testTimeout);
+			//var portTest:PortTest = new PortTest(protocol,hostname,port,application, testTimeout);
+			var portTest:PortTest = new PortTest("RTMPS",hostname,"443",application, testTimeout);
 			portTest.addConnectionSuccessListener(connectionListener);
 			portTest.connect();
 		}
